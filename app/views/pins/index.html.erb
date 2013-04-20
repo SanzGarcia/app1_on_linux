@@ -1,0 +1,33 @@
+<!-- 
+
+<h1>Listing pins</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>String</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @pins %>
+  </tbody>
+
+</table>
+
+
+<%= link_to 'New Pin', new_pin_path %>
+<br />
+-->
+
+<%= render 'pages/home' %>
+
+<div id="pins">
+  <%= render @pins %>
+</div>
+
+<%= will_paginate @pins %>
