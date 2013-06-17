@@ -1,6 +1,10 @@
 App1::Application.routes.draw do
-  resources :pins
+  get "demo/index"
+  get "demo/index2"
+  get "demo/index3"
 
+  
+  resources :pins
 
   devise_for :users
 
@@ -63,5 +67,5 @@ App1::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match ':controller(/:action(/:id))(.:format)'
 end

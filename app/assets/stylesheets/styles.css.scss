@@ -8,11 +8,12 @@ $navbarBackground: green;
 
 @import 'bootstrap';
 
-body {
-	padding-top: 60px;
-}
-
 @import 'bootstrap-responsive';
+
+
+body {
+    padding-top: 60px;
+}
 
 .navbar-inner{
 	@include box-shadow(none !important);
@@ -48,3 +49,4 @@ body {
 .description {
     margin: 10px 0 5px;
 }
+

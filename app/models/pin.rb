@@ -14,4 +14,7 @@ class Pin < ActiveRecord::Base
   	super
   end
 
+  def abc
+    
+  end
 end

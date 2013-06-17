@@ -48,3 +48,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+gem "gibbon", "~> 0.4.6"

@@ -18,7 +18,14 @@
 	  	<ul class="nav">
 	  		<li><%= link_to "HOME", root_path %></li>
 	    	<li><%= link_to "ABOUT", about_path %></li>
-		</ul>
+
+        <!-- QQDD: Add demo tag, leading to /demo/index -->
+        <li><%= link_to "DEMO", { :controller => "/demo", :action => "index" } %></li>
+		    <li><%= link_to "DEMO2", { :controller => "/pages", :action => "step1" } %></li>
+        <li><%= link_to "DEMO3", { :controller => "/demo", :action => "index3" } %></li>
+        <li><%= link_to "resume", { :controller => "/pages", :action => "step2" } %></li>
+        <li><%= link_to "mailchimp", { :controller => "/pages", :action => "step3" } %></li>
+    </ul>
 			  	<ul class="nav pull-right">
 	  		<% if user_signed_in? %>
         <li><%= link_to "Add+", new_pin_path %></li>

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>App1</title>
+	  <title><%= full_title(yield (:title)) %></title>
 	  <%= stylesheet_link_tag  "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
+
+	  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	</head>
-	<body>
 
-		 <%= render 'layouts/header' %> 
-
+	<body>		 
 		 <div class="container">
+		 	<%= render 'layouts/header' %> 
 			<% flash.each do |name, msg| %>
 				<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
 		  <% end %>	
-	<%= yield %>
+		
+	<!-- QQDD yield is for loading the view for the current controller -->
+	<%= yield %> 
 		 <%= render 'layouts/footer' %>
 	</div>
+	    <script src="http://code.jquery.com/jquery.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
